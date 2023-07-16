@@ -7,14 +7,19 @@ $S_i$ := sub-sequence of largest value ending at $i$, including $a_i$
 $\Omega_i$ := sum of all elements in $S_i$
 
 Suppose we are at $a_i$. Consider the sub-sequence $S_i$. If $\Omega_{i-1}$ is positive, then  
+
 $$
 \quad \Omega_i = \Omega_{i-1} + a_i
 $$
+
 Otherwise,
+
 $$
 \quad \Omega_{i} = a_i
 $$
+
 This gives the general value of $\Omega_i$ as
+
 $$
 \quad \Omega_i = max{
 	\begin {cases}
@@ -23,8 +28,11 @@ $$
 	\end {cases}
 }
 $$
+
 Since the largest sub-sequence possible must end at *some* position, we can find it with the expression,
+
 $$\quad \Omega = max(\Omega_i)$$
+
 ___
 ## Recursive Algorithm
 Base Case: 

@@ -15,8 +15,18 @@ The next step is to divide $P_x$ by its median. Since these points are sorted, t
 
 ## Divide and Conquer
 The median divides $P_x$ into $Q_x$ and $R_x$, and $P_y$ into $Q_y$ and $R_y$. $Q_x$ and $R_x$ can be computed in $O(1)$, $Q_y$ and $R_y$ in $O(n)$ time. 
-$$\sc{CLOSEST}\sc{PAIR}(P_x, P_y)$$
-can be defined as $\sc{CLOSEST}\sc{OF}$ ($\sc{CLOSEST}\sc{PAIR}(Q_x, Q_y),$ $\sc{CLOSEST}\sc{PAIR}(Q_x, Q_y), \sc{CLOSEST}\sc{SPLIT}\sc{PAIR}(Q_x, Q_y, R_x, R_y)$)
+
+$$ClosestPair(P_x, P_y)$$
+
+can be defined as 
+
+```
+ClosestOf(
+	ClosestPair(Q_x, Q_y),
+	ClosestPair(Q_x, Q_y),
+	ClosestSplitPair(Q_x, Q_y, R_x, R_y)
+)
+```
 
 The first two can be found recursively, the last one however, is more complex.
 

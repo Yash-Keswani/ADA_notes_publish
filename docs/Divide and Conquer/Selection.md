@@ -11,7 +11,10 @@ If $i > j$ , then $p$ must be to the left of the desired element. So, we will sc
 If $i < j$, then $p$ must be to the right of the desired element. So, we will scan to the left of $p$.
 
 In the ideal scenario, $p$ will be the median, allowing us to shorten our search group to half size with $c.n$ workcload. This will give us a recurrence relation of 
-$$T(n) = c.n + T(n/2)$$which evaluates to $O(n)$. Great! Our job's done, now all we need to do is find the median... *uh-oh*.
+
+$$T(n) = c.n + T(n/2)$$
+
+which evaluates to $O(n)$. Great! Our job's done, now all we need to do is find the median... *uh-oh*.
 
 ## The Paradox
 Finding the median in $O(n)$ time is something that we've taken for granted, and it is unfortunately a non-trivial algorithm. But it is possible! To do so though, we need an algorithm that uses a value other than the median for a pivot.
@@ -24,7 +27,9 @@ Step 2 -> The winners of these matches, i.e. the individual medians, are taken t
 Step 3 -> Find the *actual* median of *these* winners. This will give us the final pivot. Use this pivot to partition $A$, and calculate the _actual_ median with this pivot.
 
 ## Time Complexity
+
 $$T(n) = c.n + T(n/5) + T(7n/10)$$
+
 The rearrangement across partition element, and calculating the sub-medians takes $c.n$ time. $T(n/5)$ is taken to calculate the median of the sub-medians. A further $T(7n/10)$ is used to search for the desired element in the remaining array.
 
 This evaluates to a final complexity of $O(n)$, which is derived purely by guessing.

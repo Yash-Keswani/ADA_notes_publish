@@ -9,7 +9,9 @@ $\Omega(X)$ = Optimal cost for computing value of $X$ (contiguous) matrix set.
 $\sigma(X, Y)$ = Cost of multiplying the result of $X$ matrix set and $Y$ matrix set. Equivalent to $rows(X_1) \cdot cols(Y_y)$
 
 ## Recurrence 
+
 $$\Omega(A) = min(\Omega(X) + \Omega(X') + \sigma(X,X'))$$
+
 provided $X$ and $X'$ constitute the optimal breakdown of matrix set $A$, assuming $X$ ends at element $A_k$. We can do this by considering every breakdown, and taking the minimum of those. 
 
 Base Case: $\Omega(M) = 0$ if $|M| = 1$

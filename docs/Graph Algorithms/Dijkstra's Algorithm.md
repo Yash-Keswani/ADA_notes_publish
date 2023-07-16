@@ -35,5 +35,7 @@ At any iteration, suppose $f$ is the frontier vertex, being moved from $S'$ to $
 Base Case - $S = \{s_0\}$
 
 Induction Hypothesis - Suppose we have $S$ of some arbitrary size, and are moving a vertex $f$. 
+
 $$d[f] = d[u] + l_{uw} \quad [U \in S]$$
+
 Suppose an alternate shorter path $P$ exists. If it connects directly from $S$ to $f$, then it cannot be shorter than the existing path. If it connects through $S'$, it connects through another vertex, which is further apart, making it longer than the path given by Dijkstra.

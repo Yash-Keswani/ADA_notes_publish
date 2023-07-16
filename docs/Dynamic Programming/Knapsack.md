@@ -33,6 +33,7 @@ Say the last item was in the knapsack. So we remove this item. Now the knapsack 
 Otherwise, the last item cannot be in the knapsack. So, the knapsack must contain items between $1$ and $n-1$, and must be optimal up to a weight of $W$. 
 
 Now we end up in the same state as before. We can repeat this till we get to any $i'th$ item. So, the recurrence relation for the $i'th$ item is given as
+
 $$
 vmax(i, w) = max \begin {cases}
 	vmax(i-1, w-w_i) + v_i & \quad I_i \; chosen \\

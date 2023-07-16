@@ -1,6 +1,9 @@
 Consider the sorted array,
+
 $$[1, 2, 3, 4, 5, 6, 7, 8]$$
+
 and the unsorted array,
+
 $$[4, 3, 5, 2, 7, 6, 8, 1]$$
 The pair $(4,3)$ is out of order in the unsorted array. Let us call this out-of-order-pair as an inversion. 
 
@@ -24,11 +27,15 @@ The subproblems are divided as:
 -> Count the number of split inversions, add all three values, merge the array, and return that.
 
 This gives us a Recurrence relation of
+
 $$T(0, n) = 2T(n/2) + O(n)$$
+
 Because this is a tiny modification of MergeSort, it comes to a complexity of $O(n.logn)$ as well
 
 ## Pseudo-Code
-$$\sc{COUNT}\sc{AND}\sc{MERGE}(X, Y)$$
+
+$$CountAndMerge(X, Y)$$
+
 ```
 toret = []
 for j, k in X, Y:
@@ -42,7 +49,7 @@ for j, k in X, Y:
 return (toret, count)
 ```
 
-$$\sc{SORT}\sc{AND}\sc{COUNT}\sc{INV}(A)$$
+$$SortAndCountInv(A)$$
 ```
 if len(A) == 1:
 	return 0   <- base case

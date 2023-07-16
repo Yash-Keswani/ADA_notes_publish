@@ -20,6 +20,7 @@ if the two strings were interchanged, it would come as
 $\quad\Omega_{i, j} = \Omega_{i-1,\,j}$
 
 So, we can generalise this algorithm as 
+
 $$
 \Omega_{i,j} = max
 	\begin {cases}

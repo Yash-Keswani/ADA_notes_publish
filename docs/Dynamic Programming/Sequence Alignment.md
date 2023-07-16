@@ -18,11 +18,14 @@ Let's look at the end of these strings. We have three possibilities. One is that
 
 ## Proof of Optimal Substructure
 Claim: $\Omega(X,Y)$ with $x_m, y_n$ removed = $\Omega(X-x_m, Y-y_n)$.
+
 $$\quad Let \ \Omega (X, Y) = \Omega (X-x_m, Y-y_n) + \alpha (x_m, y_n)$$
+
 If there is any other string $\overline{X}$ , $\overline{Y}$ that gives $\Omega(\overline{X},\overline{Y}) > \Omega(X-x_m, Y-y_m)$, that would imply that $\Omega(\overline{X}, \overline{Y}) + \alpha (x_m, y_m)$ > $\Omega(X, Y)$, which would violate the optimality of the solution. Therefore, no such string is possible.
 
 ## Recurrence Relation
 Define $A_i$ as the string $A$ up till $i$ (included)
+
 $$
 \quad \Omega(X_i, Y_j) = min
 	\begin{cases}
@@ -31,6 +34,7 @@ $$
 	\Omega(X_i, Y_{j-1}) + \alpha(gap) \\
 	\end{cases}
 $$
+
 Base Case:
 $$\begin{align}
   \quad & \Omega(X_i, 0) = i \cdot \alpha(gap)\\
